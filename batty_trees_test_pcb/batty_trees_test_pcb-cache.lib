@@ -1,11 +1,32 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Conn_01x02_Male
+# Amplifier_Operational_LMH6611
 #
-DEF Connector_Conn_01x02_Male J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Conn_01x02_Male" 0 -200 50 H V C CNN
+DEF Amplifier_Operational_LMH6611 U 0 5 Y Y 1 F N
+F0 "U" 100 150 50 H V L CNN
+F1 "Amplifier_Operational_LMH6611" 100 -150 50 H V L CNN
+F2 "Package_TO_SOT_SMD:TSOT-23-6" 100 -250 50 H I L CNN
+F3 "" 150 150 50 H I C CNN
+$FPLIST
+ TSOT*23*
+$ENDFPLIST
+DRAW
+P 4 0 1 10 -200 200 200 0 -200 -200 -200 200 f
+X ~ 1 300 0 100 L 50 50 1 1 O
+X V- 2 -100 -300 150 U 50 50 1 1 W
+X + 3 -300 100 100 R 50 50 1 1 I
+X - 4 -300 -100 100 R 50 50 1 1 I
+X ~DISABLE 5 0 -300 200 U 50 30 1 1 I
+X V+ 6 -100 300 150 D 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+# Connector_Conn_01x03_Male
+#
+DEF Connector_Conn_01x03_Male J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Connector_Conn_01x03_Male" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -14,10 +35,13 @@ $ENDFPLIST
 DRAW
 S 34 -95 0 -105 1 1 6 F
 S 34 5 0 -5 1 1 6 F
+S 34 105 0 95 1 1 6 F
 P 2 1 1 6 50 -100 34 -100 N
 P 2 1 1 6 50 0 34 0 N
-X Pin_1 1 200 0 150 L 50 50 1 1 P
-X Pin_2 2 200 -100 150 L 50 50 1 1 P
+P 2 1 1 6 50 100 34 100 N
+X Pin_1 1 200 100 150 L 50 50 1 1 P
+X Pin_2 2 200 0 150 L 50 50 1 1 P
+X Pin_3 3 200 -100 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -73,6 +97,24 @@ P 2 0 1 13 -60 -20 60 -20 N
 P 2 0 1 12 -60 20 60 20 N
 X ~ 1 0 100 80 D 50 50 1 1 P
 X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_Jumper_NO_Small
+#
+DEF Device_Jumper_NO_Small JP 0 30 N N 1 F N
+F0 "JP" 0 80 50 H V C CNN
+F1 "Device_Jumper_NO_Small" 10 -60 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SolderJumper*Open*
+$ENDFPLIST
+DRAW
+C -40 0 20 0 1 0 N
+C 40 0 20 0 1 0 N
+X 1 1 -100 0 40 R 50 50 0 1 P
+X 2 2 100 0 40 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
@@ -385,6 +427,24 @@ X PIN9 9 -800 1650 300 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# OSU_SIM_FULL_AD8031
+#
+DEF OSU_SIM_FULL_AD8031 U 0 40 Y Y 1 F N
+F0 "U" 150 200 50 H V C CNN
+F1 "OSU_SIM_FULL_AD8031" 250 -200 50 H V C CNN
+F2 "Package_TO_SOT_SMD:SOT-23-5" -250 -350 50 H I C CNN
+F3 "" -250 -350 50 H I C CNN
+F4 "AD8031ARTZ-REEL7CT-ND" 0 0 50 H I C CNN "Digi-Key_PN"
+DRAW
+P 4 1 1 10 -250 350 350 0 -250 -350 -250 350 f
+X VOUT1 1 450 0 100 L 39 39 1 1 I
+X Vs- 2 0 -300 94 U 39 39 1 1 I
+X +IN1 3 -350 100 100 R 39 39 1 1 I
+X -IN1 4 -350 -100 100 R 39 39 1 1 I
+X +Vs 5 0 300 94 D 39 39 1 1 I
+ENDDRAW
+ENDDEF
+#
 # OSU_SIM_FULL_LTC1844ES5-3.3
 #
 DEF OSU_SIM_FULL_LTC1844ES5-3.3 U 0 40 Y Y 1 F N
@@ -494,6 +554,32 @@ F12 "Active" 200 1200 60 H I L CNN "Status"
 DRAW
 P 2 0 1 0 50 50 50 -50 N
 P 4 0 1 0 -50 50 -50 -50 50 0 -50 50 F
+X ~ A -200 0 150 R 50 50 1 1 P
+X ~ K 200 0 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# dk_Diodes-Rectifiers-Single_B240A-13-F
+#
+DEF dk_Diodes-Rectifiers-Single_B240A-13-F D 0 0 N N 1 F N
+F0 "D" 0 100 60 H V C BNN
+F1 "dk_Diodes-Rectifiers-Single_B240A-13-F" 0 -150 60 H V C CNN
+F2 "digikey-footprints:DO-214AC" 200 200 60 H I L CNN
+F3 "https://www.diodes.com/assets/Datasheets/ds13004.pdf" 200 300 60 H I L CNN
+F4 "B240A-FDICT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "B240A-13-F" 200 500 60 H I L CNN "MPN"
+F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
+F7 "Diodes - Rectifiers - Single" 200 700 60 H I L CNN "Family"
+F8 "https://www.diodes.com/assets/Datasheets/ds13004.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/diodes-incorporated/B240A-13-F/B240A-FDICT-ND/717810" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "DIODE SCHOTTKY 40V 2A SMA" 200 1000 60 H I L CNN "Description"
+F11 "Diodes Incorporated" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+P 2 0 1 0 50 50 50 -50 N
+P 4 0 1 0 -50 50 -50 -50 50 0 -50 50 F
+P 4 0 1 0 50 -50 50 -75 75 -75 75 -50 N
+P 4 0 1 0 50 50 50 75 25 75 25 50 N
 X ~ A -200 0 150 R 50 50 1 1 P
 X ~ K 200 0 150 L 50 50 1 1 P
 ENDDRAW

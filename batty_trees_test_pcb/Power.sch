@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 3 4
+Sheet 4 4
 Title "Batty Trees - Power and References"
 Date "2020-08-13"
 Rev "A"
@@ -194,7 +194,7 @@ Wire Wire Line
 	4700 1150 4600 1150
 Connection ~ 4700 1150
 Wire Wire Line
-	4700 1150 5050 1150
+	4700 1150 4900 1150
 NoConn ~ 4600 1450
 $Comp
 L dk_Diodes-Rectifiers-Single:1N4148W-7-F D?
@@ -384,12 +384,12 @@ $EndComp
 $Comp
 L power:VDDA #PWR?
 U 1 1 5F571EA3
-P 5950 1100
-F 0 "#PWR?" H 5950 950 50  0001 C CNN
-F 1 "VDDA" H 5967 1273 50  0000 C CNN
-F 2 "" H 5950 1100 50  0001 C CNN
-F 3 "" H 5950 1100 50  0001 C CNN
-	1    5950 1100
+P 6050 1000
+F 0 "#PWR?" H 6050 850 50  0001 C CNN
+F 1 "VDDA" H 6067 1173 50  0000 C CNN
+F 2 "" H 6050 1000 50  0001 C CNN
+F 3 "" H 6050 1000 50  0001 C CNN
+	1    6050 1000
 	1    0    0    -1  
 $EndComp
 Text Notes 2950 2350 0    50   ~ 0
@@ -437,7 +437,7 @@ Wire Wire Line
 	4650 2900 4550 2900
 Connection ~ 4650 2900
 Wire Wire Line
-	4650 2900 5000 2900
+	4650 2900 4800 2900
 NoConn ~ 4550 3200
 $Comp
 L dk_Diodes-Rectifiers-Single:1N4148W-7-F D?
@@ -640,12 +640,12 @@ Adjustable LDO for other board power\n0-2V  200mA 5V in
 $Comp
 L power:VDD #PWR?
 U 1 1 5F57F017
-P 5950 2800
-F 0 "#PWR?" H 5950 2650 50  0001 C CNN
-F 1 "VDD" H 5967 2973 50  0000 C CNN
-F 2 "" H 5950 2800 50  0001 C CNN
-F 3 "" H 5950 2800 50  0001 C CNN
-	1    5950 2800
+P 6050 2750
+F 0 "#PWR?" H 6050 2600 50  0001 C CNN
+F 1 "VDD" H 6067 2923 50  0000 C CNN
+F 2 "" H 6050 2750 50  0001 C CNN
+F 3 "" H 6050 2750 50  0001 C CNN
+	1    6050 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -978,42 +978,13 @@ Wire Wire Line
 	1100 6000 1500 6000
 Text Notes 1050 6200 0    50   ~ 0
 Decoupling
-$Comp
-L Connector:Conn_01x02_Male J?
-U 1 1 5F3B9BDC
-P 5850 3200
-F 0 "J?" V 6004 3012 50  0000 R CNN
-F 1 "Jumper" V 5913 3012 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5850 3200 50  0001 C CNN
-F 3 "~" H 5850 3200 50  0001 C CNN
-	1    5850 3200
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
-	5400 2900 5850 2900
-Wire Wire Line
-	5850 2900 5850 3000
+	5400 2900 5700 2900
 Connection ~ 5400 2900
 Wire Wire Line
-	5950 2800 5950 2900
-$Comp
-L Connector:Conn_01x02_Male J?
-U 1 1 5F3CD544
-P 5850 1450
-F 0 "J?" V 6004 1262 50  0000 R CNN
-F 1 "Jumper" V 5913 1262 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5850 1450 50  0001 C CNN
-F 3 "~" H 5850 1450 50  0001 C CNN
-	1    5850 1450
-	0    -1   -1   0   
-$EndComp
+	6050 2750 6050 2900
 Wire Wire Line
-	5450 1150 5850 1150
-Wire Wire Line
-	5850 1150 5850 1250
-Connection ~ 5450 1150
-Wire Wire Line
-	5950 1250 5950 1200
+	5450 1150 5700 1150
 $Comp
 L Regulator_Linear:LT3042xMSE U?
 U 1 1 5F3EA7B7
@@ -1289,41 +1260,22 @@ Wire Wire Line
 	5250 4500 5250 4600
 Wire Wire Line
 	4850 4500 5250 4500
-$Comp
-L Connector:Conn_01x02_Male J?
-U 1 1 5F3EA8A1
-P 5700 4800
-F 0 "J?" V 5854 4612 50  0000 R CNN
-F 1 "Jumper" V 5763 4612 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5700 4800 50  0001 C CNN
-F 3 "~" H 5700 4800 50  0001 C CNN
-	1    5700 4800
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
-	5250 4500 5700 4500
-Wire Wire Line
-	5700 4500 5700 4600
+	5250 4500 5500 4500
 Connection ~ 5250 4500
 Wire Wire Line
-	5800 4600 5800 4500
-Wire Wire Line
-	5800 4500 5950 4500
+	5900 4500 6050 4500
 $Comp
 L Device:R R?
 U 1 1 5F3F702F
-P 6100 4500
-F 0 "R?" V 6000 4600 50  0000 R CNN
-F 1 "1k" V 6100 4550 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6030 4500 50  0001 C CNN
-F 3 "~" H 6100 4500 50  0001 C CNN
-	1    6100 4500
+P 6200 4500
+F 0 "R?" V 6100 4600 50  0000 R CNN
+F 1 "1k" V 6200 4550 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6130 4500 50  0001 C CNN
+F 3 "~" H 6200 4500 50  0001 C CNN
+	1    6200 4500
 	0    -1   1    0   
 $EndComp
-Wire Wire Line
-	6250 4500 6300 4500
-Text HLabel 6450 4500 2    50   Input ~ 0
-dd_vref
 Text Label 4950 1150 0    50   ~ 0
 VDDA_REGOUT
 Text Label 4900 2900 0    50   ~ 0
@@ -1333,58 +1285,43 @@ DD_VREF_REGOUT
 $Comp
 L Connector:TestPoint_Alt TP?
 U 1 1 5F42BC9D
-P 6300 4300
-F 0 "TP?" H 6358 4418 50  0000 L CNN
-F 1 "Test Point" H 6358 4327 50  0000 L CNN
-F 2 "OSU_SIM_BASIC:Keystone_5019" H 6500 4300 50  0001 C CNN
-F 3 "~" H 6500 4300 50  0001 C CNN
-F 4 "36-5019CT-ND" H 6300 4300 50  0001 C CNN "Digi-Key_PN"
-	1    6300 4300
+P 5500 4250
+F 0 "TP?" H 5558 4368 50  0000 L CNN
+F 1 "Test Point" H 5558 4277 50  0000 L CNN
+F 2 "OSU_SIM_BASIC:Keystone_5019" H 5700 4250 50  0001 C CNN
+F 3 "~" H 5700 4250 50  0001 C CNN
+F 4 "36-5019CT-ND" H 5500 4250 50  0001 C CNN "Digi-Key_PN"
+	1    5500 4250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6300 4300 6300 4500
-Connection ~ 6300 4500
-Wire Wire Line
-	6300 4500 6450 4500
+	5500 4250 5500 4500
 $Comp
 L Connector:TestPoint_Alt TP?
 U 1 1 5F43A294
-P 6150 2850
-F 0 "TP?" H 6208 2968 50  0000 L CNN
-F 1 "Test Point" H 6208 2877 50  0000 L CNN
-F 2 "OSU_SIM_BASIC:Keystone_5019" H 6350 2850 50  0001 C CNN
-F 3 "~" H 6350 2850 50  0001 C CNN
-F 4 "36-5019CT-ND" H 6150 2850 50  0001 C CNN "Digi-Key_PN"
-	1    6150 2850
+P 4800 2800
+F 0 "TP?" H 4858 2918 50  0000 L CNN
+F 1 "Test Point" H 4858 2827 50  0000 L CNN
+F 2 "OSU_SIM_BASIC:Keystone_5019" H 5000 2800 50  0001 C CNN
+F 3 "~" H 5000 2800 50  0001 C CNN
+F 4 "36-5019CT-ND" H 4800 2800 50  0001 C CNN "Digi-Key_PN"
+	1    4800 2800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5950 2900 6150 2900
-Wire Wire Line
-	6150 2900 6150 2850
-Connection ~ 5950 2900
-Wire Wire Line
-	5950 2900 5950 3000
 $Comp
 L Connector:TestPoint_Alt TP?
 U 1 1 5F441870
-P 6100 1150
-F 0 "TP?" H 6158 1268 50  0000 L CNN
-F 1 "Test Point" H 6158 1177 50  0000 L CNN
-F 2 "OSU_SIM_BASIC:Keystone_5019" H 6300 1150 50  0001 C CNN
-F 3 "~" H 6300 1150 50  0001 C CNN
-F 4 "36-5019CT-ND" H 6100 1150 50  0001 C CNN "Digi-Key_PN"
-	1    6100 1150
+P 4900 1050
+F 0 "TP?" H 4958 1168 50  0000 L CNN
+F 1 "Test Point" H 4958 1077 50  0000 L CNN
+F 2 "OSU_SIM_BASIC:Keystone_5019" H 5100 1050 50  0001 C CNN
+F 3 "~" H 5100 1050 50  0001 C CNN
+F 4 "36-5019CT-ND" H 4900 1050 50  0001 C CNN "Digi-Key_PN"
+	1    4900 1050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5950 1200 6100 1200
-Wire Wire Line
-	6100 1200 6100 1150
-Connection ~ 5950 1200
-Wire Wire Line
-	5950 1200 5950 1100
+	6050 1150 6050 1000
 Wire Wire Line
 	9150 1200 9300 1200
 Wire Wire Line
@@ -1421,4 +1358,349 @@ Wire Wire Line
 Connection ~ 950  5600
 Wire Wire Line
 	950  5600 1100 5600
+$Comp
+L Connector:TestPoint_Alt TP?
+U 1 1 5F46B596
+P 750 6600
+F 0 "TP?" H 808 6718 50  0000 L CNN
+F 1 "Test Point" H 808 6627 50  0000 L CNN
+F 2 "OSU_SIM_BASIC:Keystone_5019" H 950 6600 50  0001 C CNN
+F 3 "~" H 950 6600 50  0001 C CNN
+F 4 "36-5019CT-ND" H 750 6600 50  0001 C CNN "Digi-Key_PN"
+	1    750  6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F46B8D0
+P 750 6750
+F 0 "#PWR?" H 750 6500 50  0001 C CNN
+F 1 "GND" H 755 6577 50  0000 C CNN
+F 2 "" H 750 6750 50  0001 C CNN
+F 3 "" H 750 6750 50  0001 C CNN
+	1    750  6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  6750 750  6600
+$Comp
+L Connector:TestPoint_Alt TP?
+U 1 1 5F474A48
+P 1200 6600
+F 0 "TP?" H 1258 6718 50  0000 L CNN
+F 1 "Test Point" H 1258 6627 50  0000 L CNN
+F 2 "OSU_SIM_BASIC:Keystone_5019" H 1400 6600 50  0001 C CNN
+F 3 "~" H 1400 6600 50  0001 C CNN
+F 4 "36-5019CT-ND" H 1200 6600 50  0001 C CNN "Digi-Key_PN"
+	1    1200 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F474A52
+P 1200 6750
+F 0 "#PWR?" H 1200 6500 50  0001 C CNN
+F 1 "GND" H 1205 6577 50  0000 C CNN
+F 2 "" H 1200 6750 50  0001 C CNN
+F 3 "" H 1200 6750 50  0001 C CNN
+	1    1200 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 6750 1200 6600
+$Comp
+L Connector:TestPoint_Alt TP?
+U 1 1 5F47DB76
+P 1650 6600
+F 0 "TP?" H 1708 6718 50  0000 L CNN
+F 1 "Test Point" H 1708 6627 50  0000 L CNN
+F 2 "OSU_SIM_BASIC:Keystone_5019" H 1850 6600 50  0001 C CNN
+F 3 "~" H 1850 6600 50  0001 C CNN
+F 4 "36-5019CT-ND" H 1650 6600 50  0001 C CNN "Digi-Key_PN"
+	1    1650 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F47DB80
+P 1650 6750
+F 0 "#PWR?" H 1650 6500 50  0001 C CNN
+F 1 "GND" H 1655 6577 50  0000 C CNN
+F 2 "" H 1650 6750 50  0001 C CNN
+F 3 "" H 1650 6750 50  0001 C CNN
+	1    1650 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 6750 1650 6600
+Wire Wire Line
+	5900 2900 6050 2900
+Connection ~ 5450 1150
+Wire Wire Line
+	5900 1150 6050 1150
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 5F453933
+P 5800 1150
+F 0 "JP?" H 5800 1335 50  0000 C CNN
+F 1 "Jumper" H 5800 1244 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5800 1150 50  0001 C CNN
+F 3 "~" H 5800 1150 50  0001 C CNN
+	1    5800 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 5F454916
+P 5800 2900
+F 0 "JP?" H 5800 3085 50  0000 C CNN
+F 1 "Jumper" H 5800 2994 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5800 2900 50  0001 C CNN
+F 3 "~" H 5800 2900 50  0001 C CNN
+	1    5800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 5F454C9C
+P 5800 4500
+F 0 "JP?" H 5800 4685 50  0000 C CNN
+F 1 "Jumper" H 5800 4594 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5800 4500 50  0001 C CNN
+F 3 "~" H 5800 4500 50  0001 C CNN
+	1    5800 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L OSU_SIM_FULL:AD8031 U?
+U 1 1 5F464258
+P 7750 3050
+F 0 "U?" H 7850 3250 50  0000 L CNN
+F 1 "AD8031" H 7850 2850 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7500 2700 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8031_8032.pdf" H 7500 2700 50  0001 C CNN
+F 4 "AD8031ARTZ-REEL7CT-ND" H 7750 3050 50  0001 C CNN "Digi-Key_PN"
+	1    7750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F464E82
+P 7750 3400
+F 0 "#PWR?" H 7750 3150 50  0001 C CNN
+F 1 "GND" H 7755 3227 50  0000 C CNN
+F 2 "" H 7750 3400 50  0001 C CNN
+F 3 "" H 7750 3400 50  0001 C CNN
+	1    7750 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3400 7750 3350
+Wire Wire Line
+	7750 2750 7750 2550
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F47497B
+P 7750 2550
+F 0 "#PWR?" H 7750 2400 50  0001 C CNN
+F 1 "+3V3" H 7765 2723 50  0000 C CNN
+F 2 "" H 7750 2550 50  0001 C CNN
+F 3 "" H 7750 2550 50  0001 C CNN
+	1    7750 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F475293
+P 6950 2650
+F 0 "R?" V 6850 2750 50  0000 R CNN
+F 1 "10k" V 6950 2700 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6880 2650 50  0001 C CNN
+F 3 "~" H 6950 2650 50  0001 C CNN
+	1    6950 2650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7400 3150 7200 3150
+Wire Wire Line
+	7200 3150 7200 3700
+Wire Wire Line
+	7200 3700 8350 3700
+Wire Wire Line
+	8350 3700 8350 3050
+Wire Wire Line
+	8350 3050 8200 3050
+Wire Wire Line
+	6950 2800 6950 2950
+Wire Wire Line
+	6950 2950 7400 2950
+Connection ~ 6950 2950
+Wire Wire Line
+	6950 2950 6950 3100
+$Comp
+L power:GND #PWR?
+U 1 1 5F4A5C84
+P 6950 3500
+F 0 "#PWR?" H 6950 3250 50  0001 C CNN
+F 1 "GND" H 6955 3327 50  0000 C CNN
+F 2 "" H 6950 3500 50  0001 C CNN
+F 3 "" H 6950 3500 50  0001 C CNN
+	1    6950 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3500 6950 3400
+Wire Wire Line
+	6950 2400 6950 2500
+Text HLabel 9850 3050 2    50   BiDi ~ 0
+VMID
+$Comp
+L power:VDDA #PWR?
+U 1 1 5F4D118C
+P 6950 2400
+F 0 "#PWR?" H 6950 2250 50  0001 C CNN
+F 1 "VDDA" H 6967 2573 50  0000 C CNN
+F 2 "" H 6950 2400 50  0001 C CNN
+F 3 "" H 6950 2400 50  0001 C CNN
+	1    6950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 5F4D1B29
+P 9600 3050
+F 0 "JP?" H 9600 3235 50  0000 C CNN
+F 1 "Jumper" H 9600 3144 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9600 3050 50  0001 C CNN
+F 3 "~" H 9600 3050 50  0001 C CNN
+	1    9600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F4DF495
+P 9000 3500
+F 0 "#PWR?" H 9000 3250 50  0001 C CNN
+F 1 "GND" H 9005 3327 50  0000 C CNN
+F 2 "" H 9000 3500 50  0001 C CNN
+F 3 "" H 9000 3500 50  0001 C CNN
+	1    9000 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3500 9000 3350
+$Comp
+L Device:C_Small C?
+U 1 1 5F4DF49D
+P 9000 3250
+F 0 "C?" H 8908 3296 50  0000 R CNN
+F 1 "4.7uF" H 8908 3205 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9000 3250 50  0001 C CNN
+F 3 "~" H 9000 3250 50  0001 C CNN
+F 4 "490-14466-1-ND" H 9000 3250 50  0001 C CNN "Digi-Key_PN"
+	1    9000 3250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3050 9000 3150
+$Comp
+L Device:C_Small C?
+U 1 1 5F4DF4A5
+P 9400 3250
+F 0 "C?" H 9308 3296 50  0000 R CNN
+F 1 "0.1uF" H 9308 3205 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9400 3250 50  0001 C CNN
+F 3 "~" H 9400 3250 50  0001 C CNN
+F 4 "399-8000-1-ND" H 9400 3250 50  0001 C CNN "Digi-Key_PN"
+	1    9400 3250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F4DF4AB
+P 9400 3500
+F 0 "#PWR?" H 9400 3250 50  0001 C CNN
+F 1 "GND" H 9405 3327 50  0000 C CNN
+F 2 "" H 9400 3500 50  0001 C CNN
+F 3 "" H 9400 3500 50  0001 C CNN
+	1    9400 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3350 9400 3500
+Wire Wire Line
+	9400 3050 9400 3150
+Wire Wire Line
+	9400 3050 9500 3050
+Wire Wire Line
+	9700 3050 9850 3050
+$Comp
+L Device:R R?
+U 1 1 5F4C6E74
+P 6950 3250
+F 0 "R?" V 6850 3350 50  0000 R CNN
+F 1 "10k" V 6950 3300 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6880 3250 50  0001 C CNN
+F 3 "~" H 6950 3250 50  0001 C CNN
+	1    6950 3250
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8800 3050 8900 3050
+Wire Wire Line
+	9000 3050 9400 3050
+Connection ~ 9000 3050
+Connection ~ 9400 3050
+Wire Wire Line
+	8350 3050 8500 3050
+Connection ~ 8350 3050
+Wire Wire Line
+	4800 2800 4800 2900
+Connection ~ 4800 2900
+Wire Wire Line
+	4800 2900 5000 2900
+Wire Wire Line
+	4900 1050 4900 1150
+Connection ~ 4900 1150
+Wire Wire Line
+	4900 1150 5050 1150
+Connection ~ 5500 4500
+Wire Wire Line
+	5500 4500 5700 4500
+Wire Wire Line
+	6350 4500 6550 4500
+$Comp
+L Connector:TestPoint_Alt TP?
+U 1 1 5F59FA67
+P 8900 2900
+F 0 "TP?" H 8958 3018 50  0000 L CNN
+F 1 "Test Point" H 8958 2927 50  0000 L CNN
+F 2 "OSU_SIM_BASIC:Keystone_5019" H 9100 2900 50  0001 C CNN
+F 3 "~" H 9100 2900 50  0001 C CNN
+F 4 "36-5019CT-ND" H 8900 2900 50  0001 C CNN "Digi-Key_PN"
+	1    8900 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 2900 8900 3050
+Connection ~ 8900 3050
+Wire Wire Line
+	8900 3050 9000 3050
+$Comp
+L Device:R R?
+U 1 1 5F517561
+P 8650 3050
+F 0 "R?" V 8550 3150 50  0000 R CNN
+F 1 "10k" V 8650 3100 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8580 3050 50  0001 C CNN
+F 3 "~" H 8650 3050 50  0001 C CNN
+	1    8650 3050
+	0    -1   1    0   
+$EndComp
+Text Notes 7050 3850 0    50   ~ 0
+Buffer to supply 1/2 VDDA for VGR and AFE
+Text Notes 700  3850 0    50   ~ 0
+Alt micro USB for power
+Text HLabel 6550 4500 2    50   BiDi ~ 0
+dd_vref
 $EndSCHEMATC

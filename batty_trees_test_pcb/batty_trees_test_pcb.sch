@@ -14,10 +14,17 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 1500 4400 1200 850 
+S 1500 4400 1200 1050
 U 5F370A72
 F0 "AFE" 50
 F1 "AFE.sch" 50
+F2 "VMID" B R 2700 4550 50 
+F3 "r_vinp" O R 2700 4700 50 
+F4 "r_vinn" O R 2700 4800 50 
+F5 "l_vinp" O R 2700 4950 50 
+F6 "l_vinn" O R 2700 5050 50 
+F7 "dd_rin" O R 2700 5200 50 
+F8 "dd_lin" O R 2700 5300 50 
 $EndSheet
 $Comp
 L OSU_SIM_BASIC:PLCC_84 X?
@@ -159,12 +166,6 @@ Text Label 7450 1300 3    50   ~ 0
 l_slow_valid_out
 Text Label 7550 1300 3    50   ~ 0
 l_vpulse1
-$Sheet
-S 1550 5600 1200 950 
-U 5F3A707E
-F0 "Power" 50
-F1 "Power.sch" 50
-$EndSheet
 Text Label 7750 1300 3    50   ~ 0
 l_vpulse3
 Text Label 7650 1300 3    50   ~ 0
@@ -350,8 +351,6 @@ Text Label 6050 3400 0    50   ~ 0
 l_vinn
 Text Label 6050 3200 0    50   ~ 0
 l_vinp
-Text Label 6050 3100 0    50   ~ 0
-vgr
 Text Label 6050 3000 0    50   ~ 0
 rst
 Wire Wire Line
@@ -468,4 +467,50 @@ Wire Wire Line
 	9750 2900 10300 2900
 Wire Wire Line
 	9750 2700 10300 2700
+Wire Wire Line
+	2450 7350 2850 7350
+Wire Wire Line
+	2450 7200 2850 7200
+$Sheet
+S 1850 7050 600  450 
+U 5F3A707E
+F0 "Power" 50
+F1 "Power.sch" 50
+F2 "dd_vref" B R 2450 7200 50 
+F3 "VMID" B R 2450 7350 50 
+$EndSheet
+Text Label 2850 7200 2    50   ~ 0
+dd_vref
+Text Label 2850 7350 2    50   ~ 0
+VMID
+Text Label 6050 3100 0    50   ~ 0
+VMID
+Wire Wire Line
+	2700 5200 3000 5200
+Wire Wire Line
+	2700 5300 3000 5300
+Text Label 3000 5200 2    50   ~ 0
+dd_rin
+Text Label 3000 5300 2    50   ~ 0
+dd_lin
+Wire Wire Line
+	2700 5050 3000 5050
+Wire Wire Line
+	2700 4950 3000 4950
+Wire Wire Line
+	2700 4800 3000 4800
+Wire Wire Line
+	2700 4700 3000 4700
+Wire Wire Line
+	2700 4550 3000 4550
+Text Label 3000 4550 2    50   ~ 0
+VMID
+Text Label 3000 4700 2    50   ~ 0
+r_vinp
+Text Label 3000 4800 2    50   ~ 0
+r_vinn
+Text Label 3000 4950 2    50   ~ 0
+l_vinp
+Text Label 3000 5050 2    50   ~ 0
+l_vinn
 $EndSCHEMATC

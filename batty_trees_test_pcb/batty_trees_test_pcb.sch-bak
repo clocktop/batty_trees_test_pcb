@@ -159,12 +159,6 @@ Text Label 7450 1300 3    50   ~ 0
 l_slow_valid_out
 Text Label 7550 1300 3    50   ~ 0
 l_vpulse1
-$Sheet
-S 1550 5600 1200 950 
-U 5F3A707E
-F0 "Power" 50
-F1 "Power.sch" 50
-$EndSheet
 Text Label 7750 1300 3    50   ~ 0
 l_vpulse3
 Text Label 7650 1300 3    50   ~ 0
@@ -350,8 +344,6 @@ Text Label 6050 3400 0    50   ~ 0
 l_vinn
 Text Label 6050 3200 0    50   ~ 0
 l_vinp
-Text Label 6050 3100 0    50   ~ 0
-vgr
 Text Label 6050 3000 0    50   ~ 0
 rst
 Wire Wire Line
@@ -468,4 +460,22 @@ Wire Wire Line
 	9750 2900 10300 2900
 Wire Wire Line
 	9750 2700 10300 2700
+Wire Wire Line
+	2450 7350 2850 7350
+Wire Wire Line
+	2450 7200 2850 7200
+$Sheet
+S 1850 7050 600  450 
+U 5F3A707E
+F0 "Power" 50
+F1 "Power.sch" 50
+F2 "dd_vref" B R 2450 7200 50 
+F3 "VMID" B R 2450 7350 50 
+$EndSheet
+Text Label 2850 7200 2    50   ~ 0
+dd_vref
+Text Label 2850 7350 2    50   ~ 0
+VMID
+Text Label 6050 3100 0    50   ~ 0
+VMID
 $EndSCHEMATC
