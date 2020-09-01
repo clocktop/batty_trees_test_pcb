@@ -86,19 +86,6 @@ Wire Wire Line
 Text Notes 650  1850 0    50   ~ 0
 Banana Jack Connectors for power\nnom 5V\n
 $Comp
-L power:GND #PWR075
-U 1 1 5F54C291
-P 550 3400
-F 0 "#PWR075" H 550 3150 50  0001 C CNN
-F 1 "GND" H 555 3227 50  0000 C CNN
-F 2 "" H 550 3400 50  0001 C CNN
-F 3 "" H 550 3400 50  0001 C CNN
-	1    550  3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	550  3200 550  3300
-$Comp
 L power:GND #PWR080
 U 1 1 5F54E298
 P 1700 3600
@@ -1679,25 +1666,6 @@ Wire Wire Line
 Wire Wire Line
 	1600 3100 1700 3100
 Connection ~ 1700 3100
-Wire Wire Line
-	1700 3100 1700 3200
-Wire Wire Line
-	1600 3200 1700 3200
-Connection ~ 1700 3200
-Wire Wire Line
-	1700 3200 1700 3300
-Connection ~ 1700 3300
-Wire Wire Line
-	1700 3300 1700 3450
-Wire Wire Line
-	1600 3300 1700 3300
-Wire Wire Line
-	600  3200 550  3200
-Wire Wire Line
-	600  3300 550  3300
-Connection ~ 550  3300
-Wire Wire Line
-	550  3300 550  3400
 $Comp
 L Device:R R46
 U 1 1 5F4EB4F9
@@ -1810,4 +1778,10 @@ Wire Wire Line
 	8550 2500 8550 2450
 Wire Wire Line
 	8550 2800 8550 2700
+NoConn ~ 600  3300
+NoConn ~ 600  3200
+Wire Wire Line
+	1700 3100 1700 3450
+NoConn ~ 1600 3200
+NoConn ~ 1600 3300
 $EndSCHEMATC

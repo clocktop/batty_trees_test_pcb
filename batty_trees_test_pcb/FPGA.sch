@@ -540,6 +540,7 @@ F 0 "R48" V 1150 7550 50  0000 C CNN
 F 1 "10k" V 934 7550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 980 7550 50  0001 C CNN
 F 3 "~" H 1050 7550 50  0001 C CNN
+F 4 "311-10.0KCRCT-ND" V 1050 7550 50  0001 C CNN "Digi-Key_PN"
 	1    1050 7550
 	-1   0    0    1   
 $EndComp
@@ -590,6 +591,7 @@ F 0 "R49" V 1450 7550 50  0000 C CNN
 F 1 "10k" V 1234 7550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1280 7550 50  0001 C CNN
 F 3 "~" H 1350 7550 50  0001 C CNN
+F 4 "311-10.0KCRCT-ND" V 1350 7550 50  0001 C CNN "Digi-Key_PN"
 	1    1350 7550
 	-1   0    0    1   
 $EndComp
@@ -712,6 +714,7 @@ F 0 "R50" V 1750 7550 50  0000 C CNN
 F 1 "10k" V 1534 7550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1580 7550 50  0001 C CNN
 F 3 "~" H 1650 7550 50  0001 C CNN
+F 4 "311-10.0KCRCT-ND" V 1650 7550 50  0001 C CNN "Digi-Key-PN"
 	1    1650 7550
 	-1   0    0    1   
 $EndComp
@@ -740,6 +743,7 @@ F 0 "R51" V 2050 7550 50  0000 C CNN
 F 1 "10k" V 1834 7550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1880 7550 50  0001 C CNN
 F 3 "~" H 1950 7550 50  0001 C CNN
+F 4 "311-10.0KCRCT-ND" V 1950 7550 50  0001 C CNN "Digi-Key_PN"
 	1    1950 7550
 	-1   0    0    1   
 $EndComp
@@ -1104,6 +1108,130 @@ F 3 "" H 7150 4350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7150 4350 7600 4350
+$Comp
+L dk_Pushbutton-Switches:GPTS203211B S1
+U 1 1 5F8A1849
+P 1350 5750
+F 0 "S1" H 1350 6025 50  0000 C CNN
+F 1 "GPTS203211B" H 1350 5934 50  0000 C CNN
+F 2 "digikey-footprints:PushButton_12x12mm_THT_GPTS203211B" H 1550 5950 50  0001 L CNN
+F 3 "http://switches-connectors-custom.cwind.com/Asset/GPTS203211BR2.pdf" H 1550 6050 60  0001 L CNN
+F 4 "CW181-ND" H 1550 6150 60  0001 L CNN "Digi-Key_PN"
+F 5 "GPTS203211B" H 1550 6250 60  0001 L CNN "MPN"
+F 6 "Switches" H 1550 6350 60  0001 L CNN "Category"
+F 7 "Pushbutton Switches" H 1550 6450 60  0001 L CNN "Family"
+F 8 "http://switches-connectors-custom.cwind.com/Asset/GPTS203211BR2.pdf" H 1550 6550 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/cw-industries/GPTS203211B/CW181-ND/3190590" H 1550 6650 60  0001 L CNN "DK_Detail_Page"
+F 10 "SWITCH PUSHBUTTON SPST 1A 30V" H 1550 6750 60  0001 L CNN "Description"
+F 11 "CW Industries" H 1550 6850 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1550 6950 60  0001 L CNN "Status"
+	1    1350 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  5750 1150 5750
+$Comp
+L power:VDD #PWR0170
+U 1 1 5F8AFBE8
+P 900 5200
+F 0 "#PWR0170" H 900 5050 50  0001 C CNN
+F 1 "VDD" H 917 5373 50  0000 C CNN
+F 2 "" H 900 5200 50  0001 C CNN
+F 3 "" H 900 5200 50  0001 C CNN
+	1    900  5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 5750 1700 5750
+Wire Wire Line
+	1700 5750 1700 5850
+$Comp
+L power:GND #PWR0171
+U 1 1 5F8D63C9
+P 1700 6200
+F 0 "#PWR0171" H 1700 5950 50  0001 C CNN
+F 1 "GND" H 1705 6072 50  0000 R CNN
+F 2 "" H 1700 6200 50  0001 C CNN
+F 3 "" H 1700 6200 50  0001 C CNN
+	1    1700 6200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 6200 1700 6050
+Connection ~ 1700 5750
+Wire Wire Line
+	7600 5150 7300 5150
+Text Label 7300 5150 0    50   ~ 0
+rst
+$Comp
+L Device:C_Small C?
+U 1 1 5F8BF79C
+P 1700 5950
+AR Path="/5F3A707E/5F8BF79C" Ref="C?"  Part="1" 
+AR Path="/5F370A72/5F8BF79C" Ref="C?"  Part="1" 
+AR Path="/5F35DB40/5F8BF79C" Ref="C35"  Part="1" 
+F 0 "C35" H 1608 5996 50  0000 R CNN
+F 1 "0.1uF" H 1608 5905 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1700 5950 50  0001 C CNN
+F 3 "~" H 1700 5950 50  0001 C CNN
+F 4 "399-8000-1-ND" H 1700 5950 50  0001 C CNN "Digi-Key_PN"
+	1    1700 5950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1700 5750 1900 5750
+Text Label 2000 5750 2    50   ~ 0
+rst
+Wire Wire Line
+	900  5200 900  5350
+Wire Wire Line
+	900  5650 900  5750
+$Comp
+L Device:R R?
+U 1 1 5F8A2FD8
+P 900 5500
+AR Path="/5F370A72/5F8A2FD8" Ref="R?"  Part="1" 
+AR Path="/5F35DB40/5F8A2FD8" Ref="R52"  Part="1" 
+F 0 "R52" V 1000 5500 50  0000 C CNN
+F 1 "1k" V 784 5500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 830 5500 50  0001 C CNN
+F 3 "~" H 900 5500 50  0001 C CNN
+F 4 "311-1.0KARCT-ND" V 900 5500 50  0001 C CNN "Digi-Key-PN"
+	1    900  5500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F94E7EF
+P 1900 6000
+AR Path="/5F370A72/5F94E7EF" Ref="R?"  Part="1" 
+AR Path="/5F35DB40/5F94E7EF" Ref="R53"  Part="1" 
+F 0 "R53" V 1693 6000 50  0000 C CNN
+F 1 "100k" V 1784 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1830 6000 50  0001 C CNN
+F 3 "~" H 1900 6000 50  0001 C CNN
+F 4 "311-100KCRCT-ND" V 1900 6000 50  0001 C CNN "Digi-Key_PN"
+	1    1900 6000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 5850 1900 5750
+Connection ~ 1900 5750
+Wire Wire Line
+	1900 5750 2000 5750
+$Comp
+L power:GND #PWR0172
+U 1 1 5F97E1A2
+P 1900 6200
+F 0 "#PWR0172" H 1900 5950 50  0001 C CNN
+F 1 "GND" H 1905 6072 50  0000 R CNN
+F 2 "" H 1900 6200 50  0001 C CNN
+F 3 "" H 1900 6200 50  0001 C CNN
+	1    1900 6200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6200 1900 6150
 Wire Bus Line
 	10250 3600 10250 4150
 Wire Bus Line
